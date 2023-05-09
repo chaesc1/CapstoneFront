@@ -20,6 +20,7 @@ const icons = {
   "Clouds": "cloudy",
 };
 
+
 export default function App() {
   const [city,setCity] = useState("Loading...");
   const [days,setDays] = useState([]);
