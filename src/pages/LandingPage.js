@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 export default function LandingPage({ navigation }) {
@@ -10,7 +9,7 @@ export default function LandingPage({ navigation }) {
       />
       <TouchableOpacity
         style={styles.startButton}
-        onPress={() => navigation.navigate("Login")}>
+        onPress={() => navigation.navigate("Counseling")}>
         <Text style={styles.startButtonText}>시작하기</Text>
       </TouchableOpacity>
     </View>
