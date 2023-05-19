@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LandingPage from "../client/src/pages/LandingPage"
-import LoginPage from "../client/src/pages/LoginPage"
+import * as React from "react";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LandingPage from "../client/src/pages/LandingPage";
+import LoginPage from "../client/src/pages/LoginPage";
 
 const Stack = createNativeStackNavigator();
 
