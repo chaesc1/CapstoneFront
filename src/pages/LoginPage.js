@@ -1,13 +1,38 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-export default function LandingPage() {
-  return (
+export default function LoginPage() {
+    const [userId, setUserId] = React.useState('');
+    const [userPassword, setUserPassword] = React.useState('');
+    const [loading, setLoading] = React.useState(false);
+    const [errortext, setErrortext] = React.useState('');
+ return (
     <View style={styles.container}>
-      <Image style={styles.goldPicture} source={require("../../assets/gold.png")} />
-      <TouchableOpacity style={styles.startButton}>
-        <Text style={styles.startButtonText}>시작하기</Text>
-      </TouchableOpacity>
+     <TextInput
+          style={styles.textFormTop}
+          placeholder={'아이디'}
+          onChangeText={(userId) => setUserId(userId)}
+          autoCapitalize="none"
+          returnKeyType="next"
+          onSubmitEditing={() =>
+            passwordInputRef.current && passwordInputRef.current.focus()
+          }
+          underlineColorAndroid="#f000"
+          blurOnSubmit={false}
+        />
+
+      <TextInput
+          style={styles.textFormTop}
+          placeholder={'비밀번호'}
+          onChangeText={(userId) => setUserId(userId)}
+          autoCapitalize="none"
+          returnKeyType="next"
+          onSubmitEditing={() =>
+            passwordInputRef.current && passwordInputRef.current.focus()
+          }
+          underlineColorAndroid="#f000"
+          blurOnSubmit={false}
+        />  
     </View>
   );
 }
@@ -20,21 +45,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 24,
   },
-  goldPicture: {
-    width: 200,
-    height: 200,
-  },
-  startButton: {
-    width: 150,
+  input: {
+    backgroundColor: "#FFFFFF",
     height: 40,
-    backgroundColor: "#1E2B22",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 15,
-  },
-  startButtonText: {
-    color: "white",
-    fontWeight: "bold",
-    fontSize: 20,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   },
 });
