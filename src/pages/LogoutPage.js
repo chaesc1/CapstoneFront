@@ -14,7 +14,7 @@
 //           />
 //         </View>
 //         <View style={styles.btnArea} />
-//       </View>
+//       </View>asdasdas
 //       <View style={{flex: 1}} />
 //     </View>
 //   );
