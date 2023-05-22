@@ -13,9 +13,10 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Landing" component={LandingPage} />
         <Stack.Screen name="Member" component={MemberMainPage} />
         <Stack.Screen name="Guest" component={GuestMainPage} />
+
+        <Stack.Screen name="Landing" component={LandingPage} />
 
         <Stack.Screen name="Login" component={LoginPage} />
       </Stack.Navigator>
