@@ -32,7 +32,7 @@ function App() {
             headerBackImage: "BackBtn",
             headerShown: false
           }}
-           />
+          />
         {/* LoginPage */}
         <Stack.Screen 
           name="Login" 
