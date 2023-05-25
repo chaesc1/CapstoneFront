@@ -68,6 +68,7 @@ function App() {
       </Stack.Navigator>
       <Stack.Navigator>
         <Stack.Screen name="Guest" component={GuestMainPage} />
+        <Stack.Screen name="Member" component={MemberMainPage} />
         <Stack.Screen
           name="WordChainLanding"
           component={WordChainLandingPage}
@@ -78,7 +79,7 @@ function App() {
         <Stack.Screen name="WordChain" component={WordChainPage} />
         <Stack.Screen name="Landing" component={LandingPage} />
         <Stack.Screen name="Member" component={MemberMainPage} />
-
+        {/* <Stack.Screen name="Landing" component={LandingPage} /> */}
         <Stack.Screen name="Login" component={LoginPage} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -17,8 +17,10 @@ export default function LandingPage({ navigation }) {
       />
       <TouchableOpacity
         style={styles.startButton}
-        onPress={() => navigation.navigate("Login")}
-      />
+        onPress={() => navigation.navigate("Login")}>
+        <Text style={styles.startButtonText}>시작하기</Text>
+      </TouchableOpacity>
+
       <View style={styles.container}>
         <Image
           style={styles.goldPicture}
