@@ -4,7 +4,10 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 export default function LandingPage() {
   return (
     <View style={styles.container}>
-      <Image style={styles.goldPicture} source={require("../../assets/gold.png")} />
+      <Image
+        style={styles.goldPicture}
+        source={require("../../assets/gold.png")}
+      />
       <TouchableOpacity style={styles.startButton}>
         <Text style={styles.startButtonText}>시작하기</Text>
       </TouchableOpacity>

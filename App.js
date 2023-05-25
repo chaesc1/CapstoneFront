@@ -11,23 +11,23 @@ import WordChainPage from "./src/pages/WordChainPage";
 import TwentyQuestionPage from "./src/pages/TwentyQuestionPage";
 import WordChainLandingPage from "./src/pages/WordChainLandingPage";
 
-
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Guest" component={GuestMainPage} />
         <Stack.Screen
           name="WordChainLanding"
           component={WordChainLandingPage}
         />
         <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
-        <Stack.Screen name="WordChain" component={WordChainPage} />
         <Stack.Screen name="Counseling" component={CounselingPage} />
+
+        <Stack.Screen name="WordChain" component={WordChainPage} />
         <Stack.Screen name="Landing" component={LandingPage} />
         <Stack.Screen name="Member" component={MemberMainPage} />
-        <Stack.Screen name="Guest" component={GuestMainPage} />
 
         <Stack.Screen name="Login" component={LoginPage} />
       </Stack.Navigator>

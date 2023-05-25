@@ -48,7 +48,7 @@ export default function CounselingPage({ navigation }) {
                 padding: 20,
                 fontWeight: 600,
               }}>
-              내가 먼저 할래
+              너가 먼저 해
             </Text>
           </TouchableOpacity>
         </View>
