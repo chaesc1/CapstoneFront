@@ -1,15 +1,13 @@
 import * as React from "react";
-import LogoutPage from "../client/src/pages/LogoutPage";
-import RegisterPage from "../client/src/pages/RegisterPage";
-
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import LandingPage from "../client/src/pages/LandingPage";
 import LoginPage from "../client/src/pages/LoginPage";
+import LogoutPage from "../client/src/pages/LogoutPage";
+import RegisterPage from "../client/src/pages/RegisterPage";
 import MemberMainPage from "../client/src/pages/MemberMainPage";
 import GuestMainPage from "../client/src/pages/GuestMainPage";
 import CounselingPage from "./src/pages/CounselingPage";
@@ -19,18 +17,14 @@ import WordChainLandingPage from "./src/pages/WordChainLandingPage";
 
 const Stack = createNativeStackNavigator();
 
-const landingPage = "LandingPage";
-const loginPage = "LoginPage";
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="LandingPage"
-        screenOptions={{ cardStyle: { backgroundColor: "#f3e99f" } }}>
-        {/* MainPage */}
-        <Stack.Screen
-          name={landingPage}
+      <Stack.Navigator>
+
+      <Stack.Screen
+          name="LandingPage"
           component={LandingPage}
           options={{
             title: "",
@@ -39,6 +33,16 @@ function App() {
             headerShown: false,
           }}
         />
+        
+        <Stack.Screen name="Guest" component={GuestMainPage} />
+        <Stack.Screen  name="WordChainLanding"  component={WordChainLandingPage} />
+        <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
+        <Stack.Screen name="Counseling" component={CounselingPage} />
+
+        <Stack.Screen name="WordChain" component={WordChainPage} />
+        <Stack.Screen name="Member" component={MemberMainPage} />
+        {/* <Stack.Screen name="Landing" component={LandingPage} /> */}
+
         {/* LoginPage */}
         <Stack.Screen
           name="Login"
@@ -65,22 +69,6 @@ function App() {
             },
           }}
         />
-      </Stack.Navigator>
-      <Stack.Navigator>
-        <Stack.Screen name="Guest" component={GuestMainPage} />
-        <Stack.Screen name="Member" component={MemberMainPage} />
-        <Stack.Screen
-          name="WordChainLanding"
-          component={WordChainLandingPage}
-        />
-        <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
-        <Stack.Screen name="Counseling" component={CounselingPage} />
-
-        <Stack.Screen name="WordChain" component={WordChainPage} />
-        <Stack.Screen name="Landing" component={LandingPage} />
-        <Stack.Screen name="Member" component={MemberMainPage} />
-        {/* <Stack.Screen name="Landing" component={LandingPage} /> */}
-        <Stack.Screen name="Login" component={LoginPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
