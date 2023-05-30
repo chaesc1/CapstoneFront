@@ -1,14 +1,38 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from "react-native";
 
-export default function LandingPage({navigation}) {
+export default function LandingPage({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Image style={styles.goldPicture} source={require("../../assets/gold.png")} />
-      <TouchableOpacity style={styles.startButton} onPress={() => navigation.navigate('Login')}>
+    <SafeAreaView style={styles.container}>
+      <Image
+        style={styles.goldPicture}
+        source={require("../../assets/gold.png")}
+      />
+      <TouchableOpacity
+        style={styles.startButton}
+        onPress={() => navigation.navigate("Login")}>
         <Text style={styles.startButtonText}>시작하기</Text>
       </TouchableOpacity>
-    </View>
+{/* 
+      <View style={styles.container}>
+        <Image
+          style={styles.goldPicture}
+          source={require("../../assets/gold.png")}
+        />
+        <TouchableOpacity
+          style={styles.startButton}
+          onPress={() => navigation.navigate("Counseling")}>
+          <Text style={styles.startButtonText}>시작하기</Text>
+        </TouchableOpacity> */}
+      {/* </View> */}
+    </SafeAreaView>
   );
 }
 
