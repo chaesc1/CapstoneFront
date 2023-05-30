@@ -14,14 +14,17 @@ import CounselingPage from "./src/pages/CounselingPage";
 import WordChainPage from "./src/pages/WordChainPage";
 import TwentyQuestionPage from "./src/pages/TwentyQuestionPage";
 import WordChainLandingPage from "./src/pages/WordChainLandingPage";
+import QuizPage from "../client/src/pages/QuizPage"
+import QuizPage1 from "../client/src/pages/QuizPage1"
 
 const Stack = createNativeStackNavigator();
-
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Quiz" component={QuizPage} />
+        <Stack.Screen name="Quiz1" component={QuizPage1} />
 
       <Stack.Screen
           name="LandingPage"
