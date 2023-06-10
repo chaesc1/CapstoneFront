@@ -1,20 +1,10 @@
 import { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  ScrollView,
-  TextInput,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import isTablet from "../utils/validationSize";
 import GamePhone from "../components/GamePhone";
 import GameTablet from "../components/GameTablet";
 
 export default function CounselingPage({ navigation }) {
-  const [message, setMessage] = useState("");
   const [isTabletScreen, setIsTabletScreen] = useState(isTablet());
 
   useEffect(() => {

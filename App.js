@@ -22,6 +22,7 @@ function App() {
     <RecoilRoot>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
           <Stack.Screen name="Counseling" component={CounselingPage} />
 
           <Stack.Screen
@@ -40,8 +41,6 @@ function App() {
           />
 
           <Stack.Screen name="Guest" component={GuestMainPage} />
-
-          <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
 
           <Stack.Screen name="WordChain" component={WordChainPage} />
           <Stack.Screen name="Member" component={MemberMainPage} />
