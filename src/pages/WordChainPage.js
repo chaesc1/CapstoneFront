@@ -9,9 +9,9 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
-import isTablet from "../../utils/validationSize";
-import WordChainPagePhone from "./WordChainPagePhone";
-import WordChainPageTablet from "./WordChainPageTablet";
+import isTablet from "../utils/validationSize";
+import GamePhone from "../components/GamePhone";
+import GameTablet from "../components/GameTablet";
 
 export default function WordChainPage({ navigation }) {
   const [message, setMessage] = useState("");
@@ -57,9 +57,9 @@ export default function WordChainPage({ navigation }) {
   ];
 
   return !isTabletScreen ? (
-    <WordChainPagePhone styles={styles} array={array} />
+    <GamePhone styles={styles} array={array} />
   ) : (
-    <WordChainPageTablet styles={styles} array={array} />
+    <GameTablet styles={styles} array={array} />
   );
 }
 

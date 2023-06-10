@@ -38,7 +38,7 @@ export default function WordChainPagePhone({ navigation, styles, array }) {
                 {item.user === "gold" && (
                   <Image
                     style={styles.goldPicture}
-                    source={require("../../../assets/gold.png")}
+                    source={require("../../assets/gold.png")}
                   />
                 )}
                 <View
@@ -57,7 +57,7 @@ export default function WordChainPagePhone({ navigation, styles, array }) {
         <TouchableOpacity style={styles.micButton}>
           <Image
             style={styles.sendMic}
-            source={require("../../../assets/mic-ffffff.png")}
+            source={require("../../assets/mic-ffffff.png")}
           />
         </TouchableOpacity>
         <TextInput

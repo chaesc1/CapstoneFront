@@ -27,7 +27,7 @@ function WordChainPageTablet({ navigation, styles, array }) {
       </Text>
       <Image
         style={{ width: wp("7%"), height: hp("17%") }}
-        source={require("../../../assets/mic.png")}
+        source={require("../../assets/mic.png")}
       />
     </View>
   );

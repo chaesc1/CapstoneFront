@@ -11,7 +11,7 @@ import RegisterPage from "../client/src/pages/RegisterPage";
 import MemberMainPage from "../client/src/pages/MemberMainPage";
 import GuestMainPage from "../client/src/pages/GuestMainPage";
 import CounselingPage from "./src/pages/CounselingPage";
-import WordChainPage from "./src/pages/wordChain/WordChainPage";
+import WordChainPage from "./src/pages/WordChainPage";
 import TwentyQuestionPage from "./src/pages/TwentyQuestionPage";
 import WordChainLandingPage from "./src/pages/WordChainLandingPage";
 
