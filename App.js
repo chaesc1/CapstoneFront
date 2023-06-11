@@ -14,6 +14,7 @@ import CounselingPage from "./src/pages/CounselingPage";
 import WordChainPage from "./src/pages/WordChainPage";
 import TwentyQuestionPage from "./src/pages/TwentyQuestionPage";
 import WordChainLandingPage from "./src/pages/WordChainLandingPage";
+import StatsPage from "./src/pages/StatsPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ function App() {
     <RecoilRoot>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Stats" component={StatsPage} />
           <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
           <Stack.Screen name="Counseling" component={CounselingPage} />
 

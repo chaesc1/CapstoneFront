@@ -22,7 +22,7 @@ function WordChainPageTablet({ navigation, styles, array }) {
         { justifyContent: "center", alignItems: "center", gap: hp("5%") },
       ]}>
       <Text
-        style={{ fontSize: wp("8%"), fontWeight: "bold", textAlign: "center" }}>
+        style={{ fontSize: wp("5%"), fontWeight: "bold", textAlign: "center" }}>
         {array[0].content}
       </Text>
       <Image
