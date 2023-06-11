@@ -4,14 +4,13 @@ import {
   widthPercentageToDP,
   heightPercentageToDP,
 } from "react-native-responsive-screen";
+import Chip from "./Chip";
 
 const Frequent = () => {
-  const a = 4;
-
-  const renderViews = () => {
+  const renderViews = ({ count }) => {
     const views = [];
 
-    for (let i = 0; i < a; i++) {
+    for (let i = 0; i < count ?? 0; i++) {
       views.push(
         <View
           key={i}
@@ -37,24 +36,40 @@ const Frequent = () => {
         Top 4
       </Text>
       <View style={{ flexDirection: "row" }}>
-        <View style={{ flex: 1, padding: widthPercentageToDP("5%") }}>
-          {renderViews()}
+        <View
+          style={{
+            flex: 1,
+            padding: widthPercentageToDP("5%"),
+            // justifyContent: "flex-end",
+          }}>
+          {renderViews({ count: 5 })}
           <Chip message="유치원" />
         </View>
-        <View style={{ flex: 1, padding: widthPercentageToDP("5%") }}>
-          {renderViews()}
+        <View
+          style={{
+            flex: 1,
+            padding: widthPercentageToDP("5%"),
+            // justifyContent: "flex-end",
+          }}>
+          {renderViews({ count: 5 })}
           <Chip message="사람" />
         </View>
-        <View style={{ flex: 1, padding: widthPercentageToDP("5%") }}>
-          {renderViews()}
+        <View
+          style={{
+            flex: 1,
+            padding: widthPercentageToDP("5%"),
+            // justifyContent: "flex-end",
+          }}>
+          {renderViews({ count: 5 })}
           <Chip message="초코파이" />
         </View>
         <View
           style={{
             flex: 1,
             padding: widthPercentageToDP("5%"),
+            // justifyContent: "flex-end",
           }}>
-          {renderViews()}
+          {renderViews({ count: 5 })}
           <Chip message="민지" />
         </View>
       </View>
@@ -79,20 +94,3 @@ const Frequent = () => {
 };
 
 export default Frequent;
-
-const Chip = ({ message }) => {
-  return (
-    <Text
-      style={{
-        borderRadius: "20%",
-        marginTop: heightPercentageToDP("2%"),
-        backgroundColor: "#d9d9d9",
-        fontSize: "1%",
-        textAlign: "center",
-        fontWeight: "bold",
-        padding: "10%",
-      }}>
-      {message}
-    </Text>
-  );
-};
