@@ -1,11 +1,13 @@
 import React from "react";
+import { Button } from '@rneui/base';
+import { ThemeProvider } from "@rneui/themed";
+
 import {
   StyleSheet,
   View,
   Text,
   Alert,
   TextInput,
-  Button,
   TouchableWithoutFeedback,
   Keyboard,
   TouchableOpacity,
@@ -67,7 +69,6 @@ export default function LoginPage({ navigation }) {
               blurOnSubmit={false}
             />
           </View>
-
           <View style={styles.buttonContainer}>
             {/* 로그인 하면 회원이 접근가능한 page로 */}
             <TouchableOpacity
