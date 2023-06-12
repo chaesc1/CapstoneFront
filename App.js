@@ -6,8 +6,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { View, Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LandingPage from "../client/src/pages/LandingPage";
 import LoginPage from "../client/src/pages/LoginPage";
 import MemberMainPage from "../client/src/pages/MemberMainPage";
@@ -27,7 +25,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="LandingPage"
-        screenOptions={{ cardStyle: { backgroundColor: "#f3e99f" } }}>
+        screenOptions={{ cardStyle: { backgroundColor: "#f3e99f" } }}
+      >
         {/* MainPage */}
         <Stack.Screen
           name={landingPage}
