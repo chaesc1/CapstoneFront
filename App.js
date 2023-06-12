@@ -15,6 +15,7 @@ import TwentyQuestionPage from "./src/pages/TwentyQuestionPage";
 import WordChainLandingPage from "./src/pages/WordChainLandingPage";
 import QuizPage from "../client/src/pages/QuizPage";
 import QuizPage1 from "../client/src/pages/QuizPage1";
+import MyPage from "../client/src/pages/MyPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,7 +31,7 @@ function App() {
         {/* MainPage */}
         <Stack.Screen
           name="LandingPage"
-          component={LandingPage}
+          component={MyPage}
           options={{
             title: "",
             headerBackTitleVisible: false,
@@ -39,6 +40,7 @@ function App() {
           }}
         />
 
+        <Stack.Screen name="MyPage" component={MyPage} />
         <Stack.Screen name="Guest" component={GuestMainPage} />
         <Stack.Screen
           name="WordChainLanding"
@@ -46,7 +48,6 @@ function App() {
         />
         <Stack.Screen name="TwentyQuestion" component={TwentyQuestionPage} />
         <Stack.Screen name="Counseling" component={CounselingPage} />
-
         <Stack.Screen name="WordChain" component={WordChainPage} />
         <Stack.Screen name="Member" component={MemberMainPage} />
         {/* <Stack.Screen name="Landing" component={LandingPage} /> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from '@rneui/base';
+import { Button } from "@rneui/base";
 import { ThemeProvider } from "@rneui/themed";
 
 import {
@@ -73,19 +73,22 @@ export default function LoginPage({ navigation }) {
             {/* 로그인 하면 회원이 접근가능한 page로 */}
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate("")}>
+              onPress={() => navigation.navigate("")}
+            >
               <Text style={styles.buttonText}>로그인</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => navigation.navigate("Register")}>
+              onPress={() => navigation.navigate("Register")}
+            >
               <Text style={styles.buttonText}>회원가입</Text>
             </TouchableOpacity>
           </View>
 
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate("")}>
+            onPress={() => navigation.navigate("")}
+          >
             <Text style={styles.buttonText}>체험해보기</Text>
           </TouchableOpacity>
         </View>
