@@ -1,7 +1,28 @@
-import { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { useState, useEffect } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
+import isTablet from "../utils/validationSize";
 
 export default function CounselingPage({ navigation }) {
+  const [isTabletScreen, setIsTabletScreen] = useState(isTablet());
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsTabletScreen(isTablet());
+    };
+
+    Dimensions.addEventListener("change", updateScreenSize);
+
+    return () => {
+      Dimensions.removeEventListener("change", updateScreenSize);
+    };
+  }, []);
+
   return (
     <View style={styles.container}>
       <View style={{ width: "100%", alignItems: "center", gap: 20 }}>

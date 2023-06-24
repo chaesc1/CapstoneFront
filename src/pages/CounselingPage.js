@@ -1,16 +1,23 @@
-import { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  ScrollView,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { useState, useEffect } from "react";
+import { StyleSheet, Dimensions } from "react-native";
+import isTablet from "../utils/validationSize";
+import GamePhone from "../components/GamePhone";
+import GameTablet from "../components/GameTablet";
 
 export default function CounselingPage({ navigation }) {
-  const [message, setMessage] = useState("");
+  const [isTabletScreen, setIsTabletScreen] = useState(isTablet());
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsTabletScreen(isTablet());
+    };
+
+    Dimensions.addEventListener("change", updateScreenSize);
+
+    return () => {
+      Dimensions.removeEventListener("change", updateScreenSize);
+    };
+  }, []);
 
   const array = [
     {
@@ -47,64 +54,10 @@ export default function CounselingPage({ navigation }) {
     },
   ];
 
-  return (
-    <View style={styles.container}>
-      <ScrollView>
-        {array.map((item, i) => {
-          return (
-            <View
-              key={i}
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: item.user === "gold" ? "flex-start" : "flex-end",
-                justifyContent: "flex-end",
-                marginBottom: 10,
-              }}>
-              <View
-                style={[
-                  styles.chat,
-                  {
-                    justifyContent:
-                      item.user === "gold" ? "flex-start" : "flex-end",
-                  },
-                ]}>
-                {item.user === "gold" && (
-                  <Image
-                    style={styles.goldPicture}
-                    source={require("../../assets/gold.png")}
-                  />
-                )}
-                <View
-                  style={[
-                    styles.chatBox,
-                    { flex: item.content.length > 15 ? 1 : null },
-                  ]}>
-                  <Text style={styles.chatContent}>{item.content}</Text>
-                </View>
-              </View>
-            </View>
-          );
-        })}
-      </ScrollView>
-      <View style={styles.inputContainer}>
-        <TouchableOpacity style={styles.micButton}>
-          <Image
-            style={styles.sendMic}
-            source={require("../../assets/mic-ffffff.png")}
-          />
-        </TouchableOpacity>
-        <TextInput
-          style={styles.input}
-          placeholder="대화를 입력하세요..."
-          value={message}
-          onChangeText={(text) => setMessage(text)}
-        />
-        <TouchableOpacity style={styles.sendButton}>
-          <Text style={styles.sendButtonText}>전송</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+  return !isTabletScreen ? (
+    <GamePhone styles={styles} array={array} />
+  ) : (
+    <GameTablet styles={styles} array={array} />
   );
 }
 
